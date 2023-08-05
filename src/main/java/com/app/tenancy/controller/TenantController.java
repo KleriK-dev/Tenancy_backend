@@ -16,12 +16,12 @@ public class TenantController {
 	private final TenantServiceImpl tenantServiceImpl;
 	
 	@Autowired
-	public TenantController(TenantServiceImpl tenantServiceImpl) {
+	public TenantController(final TenantServiceImpl tenantServiceImpl) {
 		this.tenantServiceImpl = tenantServiceImpl;
 	}
 	
 	@GetMapping
-	public List<Tenant> findAll(){
+	public List<Tenant> findAll() {
 		return tenantServiceImpl.findAll();
 	}
 	
