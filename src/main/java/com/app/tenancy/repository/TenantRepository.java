@@ -6,5 +6,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface TenantRepository extends JpaRepository<Tenant, String> {
-
+	
+	Tenant findTenantById(String id);
+	
 }

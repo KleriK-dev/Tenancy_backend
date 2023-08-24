@@ -8,4 +8,6 @@ public interface TenantService {
 	
 	List<Tenant> findAll();
 	
+	Tenant findTenantById(String id);
+	
 }

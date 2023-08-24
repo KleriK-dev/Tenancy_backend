@@ -13,12 +13,17 @@ public class TenantServiceImpl implements TenantService {
 	private final TenantRepository tenantRepository;
 	
 	@Autowired
-	public TenantServiceImpl(TenantRepository tenantRepository) {
+	public TenantServiceImpl(final TenantRepository tenantRepository) {
 		this.tenantRepository = tenantRepository;
 	}
 	
 	@Override
 	public List<Tenant> findAll() {
 		return tenantRepository.findAll();
+	}
+	
+	@Override
+	public Tenant findTenantById(final String id) {
+		return tenantRepository.findTenantById(id);
 	}
 }
